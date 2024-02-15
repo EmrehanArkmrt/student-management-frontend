@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import SharedLayout from "./pages/SharedLayout";
+import Home from "./pages/Home";
+import SubmitStudent from "./pages/SubmitStudent";
+import GetStudent from "./pages/GetStudent";
+import UpdateStudent from "./pages/UpdateStudent";
+import DeleteStudent from "./pages/DeleteStudent";
+import StudentList from "./pages/StudentList"; // StudentList bileşenini import et
+import Login from "./pages/Login";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+          <Routes>
+              <Route path={"/"} element={<Login/>}/>
+              <Route path={"dashboard"} element={<SharedLayout/>}>
+                  <Route index element={<Home/>}/>
+                  <Route path={"submit"} element={<SubmitStudent/>}/>
+                  <Route path={"get"} element={<GetStudent/>}/>
+                  <Route path={"update"} element={<UpdateStudent/>}/>
+                  <Route path={"delete"} element={<DeleteStudent/>}/>
+                  <Route path={"list"} element={<StudentList/>}/> {/* Öğrenci listeleme için yeni yol */}
+              </Route>
+          </Routes>
+      </BrowserRouter>
   );
 }
 
