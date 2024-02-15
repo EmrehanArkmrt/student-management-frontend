@@ -17,3 +17,6 @@ export function DeleteCall(nic) {
 export function PatchCall(nic, output) {
     return axios.patch(`${url}/${nic}`, output);
 }
+export function GetAllStudents() {
+    return axios.get(url);
+}

@@ -6,14 +6,14 @@ import GetStudent from "./pages/GetStudent";
 import UpdateStudent from "./pages/UpdateStudent";
 import DeleteStudent from "./pages/DeleteStudent";
 import StudentList from "./pages/StudentList"; // StudentList bileşenini import et
-import Login from "./pages/Login";
+
 
 function App() {
   return (
       <BrowserRouter>
           <Routes>
-              <Route path={"/"} element={<Login/>}/>
-              <Route path={"dashboard"} element={<SharedLayout/>}>
+              
+              <Route path={"/dashboard"} element={<SharedLayout/>}>
                   <Route index element={<Home/>}/>
                   <Route path={"submit"} element={<SubmitStudent/>}/>
                   <Route path={"get"} element={<GetStudent/>}/>

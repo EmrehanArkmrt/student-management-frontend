@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 import {useState} from "react";
-import {DeleteCall} from "../api/ApiCalls";
+import {DeleteCall} from "../ApiCalls";
 
 function DeleteStudent() {
     const [nic, setNic] = useState("");

@@ -9,7 +9,7 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   color: white;
   font-weight: 300;
-  background: #50a3a2;
+  background: #5071a3;
   width: 100%;
   height: 100%;
 }
@@ -160,16 +160,70 @@ body {
   background-color: white;
   border: 0;
   padding: 10px 15px;
-  color: #50a3a2;
-  border-radius: 3px;
+  color: #5071a3;
+  border-radius: 15px;
   width: 250px;
   font-size: 18px;
   margin-left: 2px;
   margin-right: 2px;
   margin-bottom: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease  
 }
 
 .back-link:hover, .back-link:focus {
+  transform: translateY(-5px); 
   cursor: pointer;
-  background-color: black;
+  background-color: rgb(1, 21, 85);
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.5);
+}
+
+.student-list-container  {
+  margin: 20px auto;
+  margin-bottom: 20px;
+  width: 80%;
+  background-color: rgba(252, 252, 252, 0.2);
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.student-list-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-list-container th, .student-list-container td {
+  text-align: left;
+  padding: 12px 15px;
+  color: white;
+  border-bottom: 1px solid rgba(252, 252, 252, 0.3);
+}
+
+.student-list-container th {
+  background-color: rgba(252, 252, 252, 0.3);
+  color: #50a3a2;
+  font-weight: bold;
+}
+
+.student-list-container tr:hover {
+  background-color: rgba(252, 252, 252, 0.1);
+}
+
+.student-list-container tr:nth-child(even) {
+  background-color: rgba(252, 252, 252, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .student-list-container {
+      width: 95%;
+  }
+
+  .student-list-container th, .student-list-container td {
+      padding: 8px 5px;
+  }
+}
+
+.back-to-dashboard {
+  text-align: center; 
+  margin-top: 20px; 
 }

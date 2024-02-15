@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import OutputContainer from "../components/OutputContainer";
-import {GetCall} from "../api/ApiCalls";
+import {GetCall} from "../ApiCalls";
 
 function GetStudent() {
     const [output, setOutput] = useState({nic: "", name: "", address: "", contact: ""});

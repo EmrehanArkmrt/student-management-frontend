@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import OutputContainer from "../components/OutputContainer";
-import {PostCall} from "../api/ApiCalls";
+import {PostCall} from "../ApiCalls";
 
 function SubmitStudent() {
     const [output, setOutput] = useState({nic: "", name: "", address: "", contact: ""});

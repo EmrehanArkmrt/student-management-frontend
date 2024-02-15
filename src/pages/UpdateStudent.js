@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import OutputContainer from "../components/OutputContainer";
-import {PatchCall, PostCall} from "../api/ApiCalls";
+import {PatchCall, PostCall} from "../ApiCalls";
 
 function UpdateStudent() {
     const [output, setOutput] = useState({nic: "", name: "", address: "", contact: ""});
