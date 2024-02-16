@@ -11,8 +11,7 @@ function Home() {
                 <Link className={"back-link"} to='/dashboard/submit'>Submit Student</Link>
                 <Link className={"back-link"} to='/dashboard/get'>Get Student</Link>
                 <Link className={"back-link"} to='/dashboard/update'>Update Student</Link>
-                <Link className={"back-link"} to='/dashboard/delete'>Delete Student</Link>
-                {/* Öğrencileri Listele Butonu Eklendi */}
+                <Link className={"back-link"} to='/dashboard/delete'>Delete Student</Link>                
                 <Link className={"back-link"} to='/dashboard/list'>List Students</Link>
             </div>
         </div>

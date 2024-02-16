@@ -24,8 +24,8 @@ function StudentList() {
     async function handleDelete(nic) {
         try {
             await DeleteCall(nic);
-            // Silme işlemi başarılı olduktan sonra öğrenci listesini güncelleyin
-            fetchStudents(); // Öğrenci listesini yeniden yükle
+            
+            fetchStudents(); 
         } catch (error) {
             console.error("An error occurred while deleting the student:", error);
         }

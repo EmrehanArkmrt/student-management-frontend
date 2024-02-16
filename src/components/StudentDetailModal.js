@@ -1,5 +1,5 @@
 function StudentDetailModal({ student, onClose }) {
-    if (!student) return null; // Eğer öğrenci bilgisi yoksa, hiçbir şey gösterme
+    if (!student) return null; 
   
     return (
       <div className="modal-backdrop">
