@@ -18,7 +18,7 @@ function DeleteStudent() {
         event.preventDefault();
         setErrMessage("");
         setResponseMessage("");
-        if (!/^\d{9}[Vv]$/.test(nic)) {
+        if (!/^\d{10}$/.test(nic)) {
             setErrMessage("Student nic number is empty or invalid");
             document.getElementById("nic").focus();
             return;

@@ -177,6 +177,60 @@ body {
   box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.5);
 }
 
+.submit-button{
+  appearance: none;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  outline: 0;
+  background-color: white;
+  border: 0;
+  padding: 10px 15px;
+  color: #5071a3;
+  border-radius: 15px;
+  width: 250px;
+  font-size: 18px;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease  
+
+}
+
+.submit-button:hover, .submit-button:focus {
+  transform: translateY(-5px); 
+  cursor: pointer;
+  background-color: rgb(1, 21, 85);
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.5);
+}
+
+.delete-button{
+  appearance: none;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  outline: 0;
+  background-color: white;
+  border: 0;
+  padding: 2px 4px;
+  color: #5071a3;
+  border-radius: 15px;
+  width:100px;
+  font-size: 18px;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease  
+
+}
+
+.delete-button:hover, .delete-button:focus {
+  transform: translateY(-5px); 
+  cursor: pointer;
+  background-color: rgb(1, 21, 85);
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.5);
+}
+
 .student-list-container  {
   margin: 20px auto;
   margin-bottom: 20px;

@@ -4,13 +4,13 @@ import OutputContainer from "../components/OutputContainer";
 import {GetCall} from "../ApiCalls";
 
 function GetStudent() {
-    const [output, setOutput] = useState({nic: "", name: "", address: "", contact: ""});
+    const [output, setOutput] = useState({nic: "", name: "", grade: "", contact: ""});
     const [nic, setNic] = useState("");
     const [errMessage, setErrMessage] = useState("");
     const [responseMessage, setResponseMessage] = useState("");
 
     function handleChange(event) {
-        setOutput({nic: "", name: "", address: "", contact: ""});
+        setOutput({nic: "", name: "", grade: "", contact: ""});
         setResponseMessage("");
         setErrMessage("");
         const newNic = event.target.value;
@@ -21,7 +21,7 @@ function GetStudent() {
         event.preventDefault();
         setErrMessage("");
         setResponseMessage("");
-        if (!/^\d{9}[Vv]$/.test(nic)) {
+        if (!/^\d{10}$/.test(nic)) {
             setErrMessage("Student nic number is empty or invalid");
             document.getElementById("nic").focus();
             return;
@@ -32,7 +32,7 @@ function GetStudent() {
             setOutput({
                 nic: response.data.nic,
                 name: response.data.name,
-                address: response.data.address,
+                grade: response.data.grade,
                 contact: response.data.contact
             });
         }
@@ -64,7 +64,7 @@ function GetStudent() {
                 <OutputContainer
                     nic={output.nic}
                     name={output.name}
-                    address={output.address}
+                    grade={output.grade}
                     contact={output.contact}
                 />
                 <br/>

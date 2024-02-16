@@ -4,8 +4,8 @@ import OutputContainer from "../components/OutputContainer";
 import {PostCall} from "../ApiCalls";
 
 function SubmitStudent() {
-    const [output, setOutput] = useState({nic: "", name: "", address: "", contact: ""});
-    const [student, setStudent] = useState({nic: "", name: "", address: "", contact: ""});
+    const [output, setOutput] = useState({nic: "", name: "", grade: "", contact: ""});
+    const [student, setStudent] = useState({nic: "", name: "", grade: "", contact: ""});
     const [errMessage, setErrMessage] = useState("");
     const [responseMessage, setResponseMessage] = useState("");
 
@@ -24,32 +24,32 @@ function SubmitStudent() {
     function handleCheckOut() {
         setErrMessage("");
         setResponseMessage("");
-        if (!/^\d{9}[Vv]$/.test(student.nic)) {
-            setErrMessage("Student nic number is empty or invalid");
+        if (!/^\d{10}$/.test(student.nic)) {
+            setErrMessage("Student NIC number must contain exactly 10 digits.");
             document.getElementById("nic").focus();
             return;
         } else if (!/^[A-Za-z][A-Za-z ]+$/.test(student.name)) {
             setErrMessage("Student name is empty or invalid");
             document.getElementById("name").focus();
             return;
-        } else if (!/^[A-Za-z\d][A-Za-z\d-|/# ,.:;\\]+$/.test(student.address)) {
-            setErrMessage("Student address is empty or invalid");
-            document.getElementById("address").focus();
+        } else if (student.grade === "" || isNaN(student.grade) || student.grade < 0 || student.grade > 100) {
+            setErrMessage("Student grade must be a number between 0 and 100");
+            document.getElementById("grade").focus();
             return;
-        } else if (!/^\d{3}-\d{7}$/.test(student.contact)) {
-            setErrMessage("Student contact is empty or invalid");
+        } if (!/^0\d{10}$/.test(student.contact)) {
+            setErrMessage("Student contact number must start with '0' followed by 10 digits.");
             document.getElementById("contact").focus();
             return;
-        }
-        setOutput({nic: student.nic, name: student.name, address: student.address, contact: student.contact});
-        setStudent({nic: "", name: "", address: "", contact: ""});
+        }        
+        setOutput({nic: student.nic, name: student.name, grade: student.grade, contact: student.contact});
+        setStudent({nic: "", name: "", grade: "", contact: ""});
     }
 
     async function handleSubmit(event) {
         event.preventDefault();
         setErrMessage("");
         setResponseMessage("");
-        if (!output.nic || !output.name || !output.address || !output.contact) {
+        if (!output.nic || !output.name || !output.grade || !output.contact) {
             setErrMessage("Inputs didn't checked out");
             return;
         }
@@ -65,7 +65,7 @@ function SubmitStudent() {
             }
         }
         finally {
-            setOutput({nic: "", name: "", address: "", contact: ""});
+            setOutput({nic: "", name: "", grade: "", contact: ""});
         }
     }
 
@@ -78,7 +78,7 @@ function SubmitStudent() {
                 <form onSubmit={handleSubmit}>
                     <input onChange={handleChange} value={student.nic} id="nic" name="nic" placeholder="Enter NIC Number" />
                     <input onChange={handleChange} value={student.name} id="name" name="name" placeholder="Enter Name" />
-                    <input onChange={handleChange} value={student.address} id="address" name="address" placeholder="Enter Address" />
+                    <input onChange={handleChange} value={student.grade} id="grade" name="grade" placeholder="Enter grade" />
                     <input onChange={handleChange} value={student.contact} id="contact" name="contact" placeholder="Enter Contact" />
                     <h5>{errMessage}&nbsp;</h5>
                     <br/>
@@ -90,7 +90,7 @@ function SubmitStudent() {
                 <OutputContainer
                     nic={output.nic}
                     name={output.name}
-                    address={output.address}
+                    grade={output.grade}
                     contact={output.contact}
                 />
                 <br/>
