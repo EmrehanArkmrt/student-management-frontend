@@ -231,6 +231,33 @@ body {
   box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.5);
 }
 
+.close-button{
+  appearance: none;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  outline: 0;
+  background-color: white;
+  border: 0;
+  padding: 2px 4px;
+  color: #5071a3;
+  border-radius: 15px;
+  width:100px;
+  font-size: 18px;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease  
+
+}
+
+.close-button:hover, .close-button:focus {
+  transform: translateY(-5px); 
+  cursor: pointer;
+  background-color: rgb(1, 21, 85);
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.5);
+}
+
 .student-list-container  {
   margin: 20px auto;
   margin-bottom: 20px;
@@ -280,4 +307,57 @@ body {
 .back-to-dashboard {
   text-align: center; 
   margin-top: 20px; 
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+}
+
+.modal {
+  background-color: #fff; 
+  padding: 20px;
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  width: 90%; /* Genişlik */
+  max-width: 500px; 
+  z-index: 1001; 
+}
+
+.modal h2 {
+  margin-top: 0;
+  color: #333;
+  margin-bottom: 16px; 
+}
+
+.modal p {
+  font-size: 16px; 
+  color: #666; 
+  line-height: 1.5; 
+  margin-bottom: 12px; 
+}
+
+.close-button {
+  display: block; 
+  width: auto; 
+  padding: 8px 20px; 
+  margin-top: 20px; 
+  background-color: #5071a3; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-weight: bold; 
+}
+
+.close-button:hover {
+  background-color: #405c8c; 
 }

@@ -9,7 +9,7 @@ function StudentDetailModal({ student, onClose }) {
           <p>Name: {student.name}</p>
           <p>Grade: {student.grade}</p>
           <p>Contact: {student.contact}</p>
-          <button onClick={onClose}>Close</button>
+          <button onClick={onClose} className="close-button">Close</button>
         </div>
       </div>
     );
