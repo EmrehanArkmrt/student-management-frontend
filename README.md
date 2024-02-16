@@ -1,6 +1,45 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+#### Images 
+
+1. Database Page <br>
+   <img src="assets/1.png" alt="login-page" width="700px"/>
+
+2. Backend Page<br>
+   <img src="assets/2.png" alt="dashboard" width="700px"/>
+
+3. Home Page<br>
+   <img src="assets/3.png" alt="submit-page" width="700px"/>
+
+4. Submit Student Page<br>
+   <img src="assets/4.png" alt="get-student-page" width="700px"/>
+
+5. Get Student Details Page<br>
+   <img src="assets/5.png" alt="update-student-page" width="700px"/>
+
+6. Update Student Page<br>
+   <img src="assets/6.png" alt="delete-student-page" width="700px"/>
+
+7. Delete Student Page<br>
+   <img src="assets/7.png" alt="delete-student-page" width="700px"/>
+
+8. Student List Page<br>
+   <img src="assets/8.png" alt="delete-student-page" width="700px"/>
+
+9. Student List 2 Page<br>
+   <img src="assets/9.png" alt="delete-student-page" width="700px"/>
+
+10. Student List 3 Page<br>
+   <img src="assets/10.png" alt="delete-student-page" width="700px"/>
+
+11. Student List 4 Page<br>
+   <img src="assets/11.png" alt="delete-student-page" width="700px"/>
+
+12. Get Student Deetails Page 2<br>
+   <img src="assets/12.png" alt="delete-student-page" width="700px"/>
+
+  
+
 
 ## Available Scripts
 
